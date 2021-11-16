@@ -1,0 +1,8 @@
+﻿EntityFrameworkCore\Add-Migration InitialCreate -Context LeasingRazorDbContext -OutputDir Persistence/Migrations
+
+EntityFrameworkCore\Update-Database -CONTEXT LeasingRazorDbContext
+
+EntityFrameworkCore\Drop-Database -CONTEXT LeasingRazorDbContext
+
+
+EntityFrameworkCore\Add-Migration InitialCreate -Context LeasingRazorDbContext -OutputDir Persistence/Migrations

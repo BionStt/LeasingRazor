@@ -1,0 +1,82 @@
+﻿@page
+@model LeasingRazor.Pages.DataAvalist.CreateDataKontrakAsuransiModel
+@{
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="CreateDataKontrakAsuransi">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <table class="table table-bordered table-striped grid text-nowrap table-responsive " style="border:double" width="200">
+                <tr>
+                    <td> <label asp-for="DataKonstrakAsuransi.NoUrutDataAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.NoUrutDataAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.NoUrutDataAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label asp-for="DataKonstrakAsuransi.NoRegistrasiKontrakKredit" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.NoRegistrasiKontrakKredit" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.NoRegistrasiKontrakKredit" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>   <label asp-for="DataKonstrakAsuransi.KodeAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.KodeAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.KodeAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>   <label asp-for="DataKonstrakAsuransi.JenisAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.JenisAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.JenisAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label asp-for="DataKonstrakAsuransi.TanggalMulaiAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.TanggalMulaiAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.TanggalMulaiAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>   <label asp-for="DataKonstrakAsuransi.TanggalAkhirAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.TanggalAkhirAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.TanggalAkhirAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>   <label asp-for="DataKonstrakAsuransi.LamaAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.LamaAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.LamaAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label asp-for="DataKonstrakAsuransi.NilaiPertanggungan" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.NilaiPertanggungan" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.NilaiPertanggungan" class="text-danger"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label asp-for="DataKonstrakAsuransi.BiayaAsuransi" class="control-label"></label></td>
+                    <td>
+                        <input asp-for="DataKonstrakAsuransi.BiayaAsuransi" class="form-control" />
+                        <span asp-validation-for="DataKonstrakAsuransi.BiayaAsuransi" class="text-danger"></span>
+                    </td>
+                </tr>
+            </table>
+
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
