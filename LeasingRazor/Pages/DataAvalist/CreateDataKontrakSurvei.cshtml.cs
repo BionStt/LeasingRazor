@@ -75,8 +75,9 @@ namespace LeasingRazor.Pages.DataAvalist
 
 
 
-
-            return RedirectToPage();
+            return RedirectToPage("./DataAvalist/CreateDataKontrakKredit");
+            //   return RedirectToPage("./CreateDataKontrakKredit");
+            // return RedirectToPage();
         }
 
     }

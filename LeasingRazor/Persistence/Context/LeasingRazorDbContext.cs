@@ -30,6 +30,7 @@ namespace LeasingRazor.Persistence.Context
         public DbSet<DataKontrakKreditAngsuranDemo> DataKontrakKreditAngsuranDemo { get; set; }
 
         public DbSet<DataKontrakSurvei> DataKontrakSurvei { get; set; }
+        public DbSet<UserProfile> UserProfile { get; set; }
 
 
 
