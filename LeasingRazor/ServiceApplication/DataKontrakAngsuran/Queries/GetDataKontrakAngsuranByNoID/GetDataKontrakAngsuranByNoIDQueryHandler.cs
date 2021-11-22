@@ -24,7 +24,7 @@ namespace LeasingRazor.ServiceApplication.DataKontrakAngsuran.Queries.GetDataKon
             var returnQuery = await (from a in _context.DataKontrakAngsuran
                             join b in _context.DataKontrakKredit on a.DataKontrakKreditId equals b.DataKontrakKreditId
                             join c in _context.DataKontrakSurvei on b.DataKontrakSurveiId equals c.DataKontrakSurveiId
-                            where b.NoUrutId == Int32.Parse(request.Id)
+                            where b.NoUrutId == Int32.Parse(request.dataKontrakId)
 
                             select new GetDataKontrakAngsuranByNoIDResponse
                             {

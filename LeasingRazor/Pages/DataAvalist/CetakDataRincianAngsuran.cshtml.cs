@@ -3,6 +3,7 @@ using LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataKontr
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using LeasingRazor.Dto.DataKontrakKreditAngsuranDemo;
 
 namespace LeasingRazor.Pages.DataAvalist
 {
@@ -10,37 +11,41 @@ namespace LeasingRazor.Pages.DataAvalist
     {
         private readonly IMediator _mediator;
 
+        [BindProperty]
+        public IReadOnlyCollection<GetDataKontrakAngsuranByNoIDResponse> DataKontrakAngsuranById { get; set; }
+
         public CetakDataRincianAngsuranModel(IMediator mediator)
         {
             _mediator=mediator;
         }
 
-        public async Task OnGetAsync()
+        public async Task OnGetAsync(string dataKontrakKreditId)
         {
-            var DataAngsuran = await Mediator.Send(new GetListDataKontrakKreditByNoIDQuery { dataKontrakId = Id });
-            var aa = DataAngsuran.DataKontraKrediListByIDDs.ToList();
-            ViewBag.NamaKonsumen1 = aa[0].NamaKonsumen1;
-            ViewBag.NamaPenjamin1 = aa[0].NamaPenjamin1;
-            ViewBag.AlamatRumah = aa[0].AlamatRumah;
-            ViewBag.NoTeleponRumah = aa[0].NoTeleponRumah;
-            ViewBag.NoTeleponKantor = aa[0].NoTeleponKantor;
-            ViewBag.NoTeleponUsaha = aa[0].NoTeleponUsaha;
-            ViewBag.NoHP1 = aa[0].NoHP1;
-            ViewBag.NoHP2 = aa[0].NoHP2;
-            ViewBag.NilaiKontrak1 = aa[0].NilaiKontrak1;
-            ViewBag.NilaiBunga1 = aa[0].NilaiBunga1;
-            ViewBag.Tenor1 = aa[0].Tenor1;
-            ViewBag.Angsuran1 = aa[0].Angsuran1;
-            ViewBag.pinjamanPokok = aa[0].pinjamanPokok;
+            var DataAngsuran = await _mediator.Send(new GetListDataKontrakKreditByNoIDQuery { dataKontrakId = dataKontrakKreditId });
+
+           
+            ViewData["NamaKonsumen1"] = DataAngsuran.NamaKonsumen1;
+            ViewData["NamaPenjamin1"] = DataAngsuran.NamaPenjamin1;
+            ViewData["AlamatRumah"] = DataAngsuran.AlamatRumah;
+            ViewData["NoTeleponRumah"] = DataAngsuran.NoTeleponRumah;
+            ViewData["NoTeleponKantor"] = DataAngsuran.NoTeleponKantor;
+            ViewData["NoTeleponUsaha"] = DataAngsuran.NoTeleponUsaha;
+            ViewData["NoHP1"] = DataAngsuran.NoHP1;
+            ViewData["NoHP2"] = DataAngsuran.NoHP2;
+            ViewData["NilaiKontrak1"] = DataAngsuran.NilaiKontrak1;
+            ViewData["NilaiBunga1"] = DataAngsuran.NilaiBunga1;
+            ViewData["Tenor1"] = DataAngsuran.Tenor1;
+            ViewData["Angsuran1"] = DataAngsuran.Angsuran1;
+            ViewData["pinjamanPokok"] = DataAngsuran.pinjamanPokok;
 
 
-            var RinciangAngsuran = await _mediator.Send(new GetDataKontrakAngsuranByNoIDQuery { dataKontrakId = Id });
-            var RinciangAngsuran1 = RinciangAngsuran;
+            DataKontrakAngsuranById = await _mediator.Send(new GetDataKontrakAngsuranByNoIDQuery { dataKontrakId = dataKontrakKreditId });
+         
 
         }
-        public async Task<IActionResult> OnPostAsync()
-        {
-            return RedirectToPage();
-        }
+        //public async Task<IActionResult> OnPostAsync()
+        //{
+        //    return RedirectToPage();
+        //}
     }
 }

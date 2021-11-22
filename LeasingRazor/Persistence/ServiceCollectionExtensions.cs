@@ -1,6 +1,9 @@
-﻿using LeasingRazor.Persistence.Context;
+﻿using LeasingRazor.Domain;
+using LeasingRazor.Persistence.Context;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +20,14 @@ namespace LeasingRazor.Persistence
 
             services.AddDbContext<LeasingRazorDbContext>(options =>
               options.UseSqlServer(connectionString));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<LeasingRazorDbContext>().AddDefaultUI().AddDefaultTokenProviders();
+
+   //         services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+   //        .AddEntityFrameworkStores<AccountingDbContext>()
+   //        .AddDefaultUI()
+   //.AddDefaultTokenProviders();
 
             services.AddMediatR(Assembly.GetExecutingAssembly());
             return services;

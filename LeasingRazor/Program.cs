@@ -23,10 +23,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddLeasingRazor(builder.Configuration.GetConnectionString("LeasingRazorConnection"));
 
-builder.Services.AddDbContext<LeasingRazorContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LeasingRazorConnection")));
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<LeasingRazorContext>();
+//builder.Services.AddDbContext<LeasingRazorContext>(options =>
+//    options.UseSqlServer(builder.Configuration.GetConnectionString("LeasingRazorConnection")));
+
+//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+//    .AddEntityFrameworkStores<LeasingRazorContext>();
 
 builder.Services.AddMvc(o =>
 {

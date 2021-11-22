@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataKontrakKreditByNoID
 {
-    public class GetListDataKontrakKreditByNoIDQueryHandler : IRequestHandler<GetListDataKontrakKreditByNoIDQuery, IReadOnlyCollection<GetListDataKontrakKreditByNoIDResponse>>
+    public class GetListDataKontrakKreditByNoIDQueryHandler : IRequestHandler<GetListDataKontrakKreditByNoIDQuery, GetListDataKontrakKreditByNoIDResponse>
     {
         private readonly LeasingRazorDbContext _context;
 
@@ -19,7 +19,7 @@ namespace LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataK
             _context=context;
         }
 
-        public async Task<IReadOnlyCollection<GetListDataKontrakKreditByNoIDResponse>> Handle(GetListDataKontrakKreditByNoIDQuery request, CancellationToken cancellationToken)
+        public async Task<GetListDataKontrakKreditByNoIDResponse> Handle(GetListDataKontrakKreditByNoIDQuery request, CancellationToken cancellationToken)
         {
             var returnQuery = await (from a in _context.DataKontrakAngsuran
                             join b in _context.DataKontrakKredit on a.DataKontrakKreditId equals b.DataKontrakKreditId
@@ -47,7 +47,7 @@ namespace LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataK
 
                             }
 
-             ).ToListAsync(cancellationToken);
+             ).SingleOrDefaultAsync(cancellationToken);
 
             return returnQuery;
 

@@ -1,0 +1,2751 @@
+﻿@page
+@model LeasingRazor.Pages.DataAvalist.CreateDataKonsumenModel
+@{
+}
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="CreateDataKonsumenAvalist">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @*<div class="col-md-5">
+                        <div class="form-group">
+                            <label asp-for="NoUrutKonsumen" class="control-label"></label>
+                            <input asp-for="NoUrutKonsumen" class="form-control" />
+                            <span asp-validation-for="NoUrutKonsumen" class="text-danger"></span>
+
+
+                        </div>
+                    </div>*@
+                @*<div class="col-md-5">
+                        <div class="form-group">
+                            <label asp-for="NoRegisterKonsumen" class="control-label"></label>
+                            <input asp-for="NoRegisterKonsumen" class="form-control" />
+                            <span asp-validation-for="NoRegisterKonsumen" class="text-danger"></span>
+
+                        </div>
+                    </div>*@
+            </div>
+            <div class="form-group">
+                @*<div class="col-md-5">
+                        <div class="form-group">
+
+                            <label asp-for="TanggalRegister" class="control-label"></label>
+                            <input asp-for="TanggalRegister" class="form-control" />
+                            <span asp-validation-for="TanggalRegister" class="text-danger"></span>
+
+                        </div>
+                    </div>*@
+
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NoKTP" class="control-label"></label>
+                        <input id="NoKTP1" asp-for="DataKonsumenRequest.NoKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoKTP" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NamaKonsumen" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaKonsumen" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaKonsumen" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.AlamatTinggalK" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatTinggalK" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatTinggalK" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KelurahanK" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanK" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanK" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KecamatanK" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanK" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanK" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KotaK" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaK" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaK" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.PropinsiK" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiK" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiK" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KodePosTinggalK" class="control-label"></label>
+                        <input id="KodePosTinggalK1" asp-for="DataKonsumenRequest.KodePosTinggalK" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosTinggalK" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TelpRumah" class="control-label"></label>
+                        <input id="TelpRumah1" asp-for="DataKonsumenRequest.TelpRumah" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TelpRumah" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoHandphone" class="control-label"></label>
+                        <input id="NoHandphone1" asp-for="DataKonsumenRequest.NoHandphone" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoHandphone" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NoHandphone2" class="control-label"></label>
+                        <input id="NoHandphone2a" asp-for="DataKonsumenRequest.NoHandphone2" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoHandphone2" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.TempatLahir" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.TempatLahir" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TempatLahir" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.Tanggallahir" class="control-label"></label>
+                        <input id="Tanggallahir1" asp-for="DataKonsumenRequest.Tanggallahir" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.Tanggallahir" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TanggalExpireKTP" class="control-label"></label>
+                        <input id="TanggalExpireKTP1" asp-for="DataKonsumenRequest.TanggalExpireKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TanggalExpireKTP" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.AlamatKTP" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatKTP" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KelurahanKTP" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanKTP" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KecamatanKTP" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanKTP" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KotaKTP" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaKTP" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.PropinsiKTP" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiKTP" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePosKTP" class="control-label"></label>
+                        <input id="KodePosKTP1" asp-for="DataKonsumenRequest.KodePosKTP" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosKTP" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.JenisKelamin" class="control-label"></label>
+                        <select asp-for="DataKonsumenRequest.JenisKelamin" class="form-control" asp-items="@ViewBag.JenisKelamin1"></select>
+
+                        <span asp-validation-for="DataKonsumenRequest.JenisKelamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.StatusNikah" class="control-label"></label>
+                        <select asp-items="@ViewBag.StatusNikah" asp-for="DataKonsumenRequest.StatusNikah" class="form-control"></select>
+
+                        <span asp-validation-for="DataKonsumenRequest.StatusNikah" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.Agama" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.Agama1" asp-for="DataKonsumenRequest.Agama" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.Agama" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TingkatPendidikan" class="control-label"></label>
+
+                        <select asp-for="DataKonsumenRequest.TingkatPendidikan" class="form-control" asp-items="@ViewBag.TingkatPendidikan"></select>
+                        <span asp-validation-for="DataKonsumenRequest.TingkatPendidikan" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.Email" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.Email" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.Email" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePekerjaan" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.NamaBidangPekerjaan1" asp-for="DataKonsumenRequest.KodePekerjaan" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.KodePekerjaan" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaPekerjaan" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaPekerjaan" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaPekerjaan" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.JabatanPerusahaan" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.JabatanPerusahaan" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.JabatanPerusahaan" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaKantor" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.AlamatKantor" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KelurahanKantor" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanKantor" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KecamatanKantor" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KotaKantor" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.PropinsiKantor" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KodePosKantor" class="control-label"></label>
+                        <input id="KodePosKantor1" asp-for="DataKonsumenRequest.KodePosKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TelpKantor" class="control-label"></label>
+                        <input id="TelpKantor1" asp-for="DataKonsumenRequest.TelpKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TelpKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.FaxKantor" class="control-label"></label>
+                        <input id="FaxKantor1" asp-for="DataKonsumenRequest.FaxKantor" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.FaxKantor" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NamaUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.AlamatUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KelurahanUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KecamatanUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanUsaha" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KotaUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaUsaha" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.PropinsiUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiUsaha" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePosUsaha" class="control-label"></label>
+                        <input id="KodePosUsaha1" asp-for="DataKonsumenRequest.KodePosUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TelpUsaha" class="control-label"></label>
+                        <input id="TelpUsaha1" asp-for="DataKonsumenRequest.TelpUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TelpUsaha" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.FaxUsaha" class="control-label"></label>
+                        <input id="FaxUsaha1" asp-for="DataKonsumenRequest.FaxUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.FaxUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoNpwpusaha" class="control-label"></label>
+                        <input id="NoNpwpusaha1" asp-for="DataKonsumenRequest.NoNpwpusaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoNpwpusaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoSiupusaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NoSiupusaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoSiupusaha" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoTDPusaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NoTDPusaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoTDPusaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TanggalMulaiUsaha" class="control-label"></label>
+                        <input id="TanggalMulaiUsaha1" asp-for="DataKonsumenRequest.TanggalMulaiUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TanggalMulaiUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.JumlahKaryawan" class="control-label"></label>
+                        <input id="JumlahKaryawan1" asp-for="DataKonsumenRequest.JumlahKaryawan" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.JumlahKaryawan" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.SkalaUsaha" class="control-label"></label>
+                        <select asp-for="DataKonsumenRequest.SkalaUsaha" class="form-control" asp-items="@ViewBag.SkalaUsaha1"></select>
+                        <span asp-validation-for="DataKonsumenRequest.SkalaUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KodeBidangUsaha" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.NamaBidangUsaha1" asp-for="DataKonsumenRequest.KodeBidangUsaha" class="form-control"></select>
+
+
+                        <span asp-validation-for="DataKonsumenRequest.KodeBidangUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NamaBidangUsaha" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaBidangUsaha" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaBidangUsaha" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.AlamatSurat" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatSurat" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatSurat" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KelurahanSurat" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanSurat" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanSurat" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KecamatanSurat" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanSurat" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanSurat" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KotaSurat" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaSurat" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaSurat" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.PropinsiSurat" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiSurat" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiSurat" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePosSurat" class="control-label"></label>
+                        <input id="KodePosSurat1" asp-for="DataKonsumenRequest.KodePosSurat" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosSurat" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaIbuKandung" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaIbuKandung" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaIbuKandung" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePekerjaanIbuKandung" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.NamaBidangPekerjaan1" asp-for="DataKonsumenRequest.KodePekerjaanIbuKandung" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.KodePekerjaanIbuKandung" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaPekerjaanIbuKandung" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaPekerjaanIbuKandung" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaPekerjaanIbuKandung" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodeBidangUsahaIbuKandung" class="control-label"></label>
+                        <select asp-items="@ViewBag.NamaBidangUsaha1" asp-for="DataKonsumenRequest.KodeBidangUsahaIbuKandung" class="form-control"></select>
+
+                        <span asp-validation-for="DataKonsumenRequest.KodeBidangUsahaIbuKandung" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaBidangUsahaIbuKandung" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaBidangUsahaIbuKandung" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaBidangUsahaIbuKandung" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NamaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaPenjamin" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.AlamatPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KelurahanPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KecamatanPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanPenjamin" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KotaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.PropinsiPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePosPenjamin" class="control-label"></label>
+                        <input id="KodePosPenjamin1" asp-for="DataKonsumenRequest.KodePosPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TelpRumahPenjamin" class="control-label"></label>
+                        <input id="TelpRumahPenjamin1" asp-for="DataKonsumenRequest.TelpRumahPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TelpRumahPenjamin" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NoHandphonePenjamin" class="control-label"></label>
+                        <input id="NoHandphonePenjamin1" asp-for="DataKonsumenRequest.NoHandphonePenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoHandphonePenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoHandphonePenjamin2" class="control-label"></label>
+                        <input id="NoHandphonePenjamin2a" asp-for="DataKonsumenRequest.NoHandphonePenjamin2" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoHandphonePenjamin2" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NoKTPPenjamin" class="control-label"></label>
+                        <input id="NoKTPPenjamin1" asp-for="DataKonsumenRequest.NoKTPPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoKTPPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.TempatLahirPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.TempatLahirPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TempatLahirPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.TanggalLahirPenjamin" class="control-label"></label>
+                        <input id="TanggalLahirPenjamin1" asp-for="DataKonsumenRequest.TanggalLahirPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TanggalLahirPenjamin" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.TanggalExpireKTPPenjamin" class="control-label"></label>
+                        <input id="TanggalExpireKTPPenjamin1" asp-for="DataKonsumenRequest.TanggalExpireKTPPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TanggalExpireKTPPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.AlamatKtpPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatKtpPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatKtpPenjamin" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KelurahanKtpPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanKtpPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanKtpPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KecamatanKtpPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanKtpPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanKtpPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KotaKtpPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaKtpPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaKtpPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.PropinsiKtpPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiKtpPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiKtpPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KodePosKTPPenjamin" class="control-label"></label>
+                        <input id="KodePosKTPPenjamin1" asp-for="DataKonsumenRequest.KodePosKTPPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosKTPPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.JenisKelaminPenjamin" class="control-label"></label>
+                        <select asp-items="@ViewBag.JenisKelamin1" asp-for="DataKonsumenRequest.JenisKelaminPenjamin" class="form-control"></select>
+
+                        <span asp-validation-for="DataKonsumenRequest.JenisKelaminPenjamin" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.StatusNikahPenjamin" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.StatusNikah" asp-for="DataKonsumenRequest.StatusNikahPenjamin" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.StatusNikahPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.AgamaPenjamin" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.Agama1" asp-for="DataKonsumenRequest.AgamaPenjamin" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.AgamaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.EmailPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.EmailPenjamin" class="form-control" placeholder="Contoh : abc@gmail.com" />
+                        <span asp-validation-for="DataKonsumenRequest.EmailPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodeBidangUsahaPenjamin" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.NamaBidangUsaha1" asp-for="DataKonsumenRequest.KodeBidangUsahaPenjamin" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.KodeBidangUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaBidangUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaBidangUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaBidangUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePekerjaanPenjamin" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.NamaBidangPekerjaan1" asp-for="DataKonsumenRequest.KodePekerjaanPenjamin" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.KodePekerjaanPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NamaPekerjaanPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaPekerjaanPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaPekerjaanPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.TingkatPendidikanPenjamin" class="control-label"></label>
+
+                        <select asp-items="@ViewBag.TingkatPendidikan" asp-for="DataKonsumenRequest.TingkatPendidikanPenjamin" class="form-control"></select>
+                        <span asp-validation-for="DataKonsumenRequest.TingkatPendidikanPenjamin" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.HubunganPenjamin" class="control-label"></label>
+
+                        <select asp-for="DataKonsumenRequest.HubunganPenjamin" class="form-control" asp-items="@ViewBag.HubunganDenganKel"></select>
+                        <span asp-validation-for="DataKonsumenRequest.HubunganPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NamaKantorPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.AlamatKantorPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KelurahanKantorPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KecamatanKantorPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KotaKantorPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.PropinsiKantorPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePosKantorPenjamin" class="control-label"></label>
+                        <input id="KodePosKantorPenjamin1" asp-for="DataKonsumenRequest.KodePosKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest. KodePosKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.TelpKantorPenjamin" class="control-label"></label>
+                        <input id="TelpKantorPenjamin1" asp-for="DataKonsumenRequest.TelpKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TelpKantorPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.FaxKantorPenjamin" class="control-label"></label>
+                        <input id="FaxKantorPenjamin1" asp-for="DataKonsumenRequest.FaxKantorPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.FaxKantorPenjamin" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NamaUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NamaUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NamaUsahaPenjamin" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.AlamatUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.AlamatUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.AlamatUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KelurahanUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KelurahanUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KelurahanUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KecamatanUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KecamatanUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KecamatanUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.KotaUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.KotaUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KotaUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.PropinsiUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.PropinsiUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.PropinsiUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.KodePosUsahaPenjamin" class="control-label"></label>
+                        <input id="KodePosUsahaPenjamin1" asp-for="DataKonsumenRequest.KodePosUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.KodePosUsahaPenjamin" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.TelpUsahaPenjamin" class="control-label"></label>
+                        <input id="TelpUsahaPenjamin1" asp-for="DataKonsumenRequest.TelpUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.TelpUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.FaxUsahaPenjamin" class="control-label"></label>
+                        <input id="FaxUsahaPenjamin1" asp-for="DataKonsumenRequest.FaxUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.FaxUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.NoNPWPUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NoNPWPUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoNPWPUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoSIUPusahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NoSIUPusahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoSIUPusahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.NoTDPUsahaPenjamin" class="control-label"></label>
+                        <input asp-for="DataKonsumenRequest.NoTDPUsahaPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.NoTDPUsahaPenjamin" class="text-danger"></span>
+
+
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label asp-for="DataKonsumenRequest.JmlKaryawanPenjamin" class="control-label"></label>
+                        <input id="JmlKaryawanPenjamin1" asp-for="DataKonsumenRequest.JmlKaryawanPenjamin" class="form-control" />
+                        <span asp-validation-for="DataKonsumenRequest.JmlKaryawanPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-5">
+                    <div class="form-group">
+
+                        <label asp-for="DataKonsumenRequest.SkalaUsahaPenjamin" class="control-label"></label>
+                        <select asp-for="DataKonsumenRequest.SkalaUsahaPenjamin" class="form-control" asp-items="@ViewBag.SkalaUsaha1"></select>
+                        <span asp-validation-for="DataKonsumenRequest.SkalaUsahaPenjamin" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-default" />
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="form-group">
+
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $('#TanggalExpireKTPPenjamin1').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: "dd-mm-yy",
+        yearRange: "c-100:c+10"
+    });
+    $('#Tanggallahir1').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: "dd-mm-yy",
+        yearRange: "c-100:c+10"
+    });
+    $('#TanggalExpireKTP1').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: "dd-mm-yy",
+        yearRange: "c-100:c+10"
+    });
+    $('#TanggalLahirPenjamin1').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: "dd-mm-yy",
+        yearRange: "c-100:c+10"
+    });
+    $('#TanggalMulaiUsaha1').datepicker({
+        changeMonth: true,
+        changeYear: true,
+        dateFormat: "dd-mm-yy",
+        yearRange: "c-100:c+10"
+    });
+
+    $('#NoKTP1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoKTP1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosTinggalK1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosTinggalK1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#TelpRumah1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#TelpRumah1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#NoHandphone1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoHandphone1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#NoHandphone2a').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoHandphone2a').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    }); $('#KodePosKTP1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosKTP1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosKantor1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosKantor1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#TelpKantor1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#TelpKantor1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#FaxKantor1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#FaxKantor1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosUsaha1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosUsaha1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#TelpUsaha1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#TelpUsaha1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#FaxUsaha1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#FaxUsaha1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#NoNpwpusaha1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoNpwpusaha1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosKTPPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosKTPPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#JumlahKaryawan1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#JumlahKaryawan1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosSurat1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosSurat1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#TelpRumahPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#TelpRumahPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#NoHandphonePenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoHandphonePenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#NoHandphonePenjamin2a').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoHandphonePenjamin2a').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#NoKTPPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#NoKTPPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+
+    $('#KodePosKantorPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosKantorPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#TelpKantorPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#TelpKantorPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#FaxKantorPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#FaxKantorPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#KodePosUsahaPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#KodePosUsahaPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#TelpUsahaPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#TelpUsahaPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#FaxUsahaPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#FaxUsahaPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+    $('#JmlKaryawanPenjamin1').keypress(function (e) {
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+
+        return false;
+    });
+    $('#JmlKaryawanPenjamin1').keydown(function (e) {
+        // return /[0-9]/.test(String.fromCharCode(e.which));
+        var key = e.which || e.keyCode;
+        if (!e.shiftKey && !e.altKey && !e.ctrlKey &&
+            // numbers
+            key >= 48 && key <= 57 ||
+            // Numeric keypad
+            key >= 96 && key <= 105 ||
+            // Backspace and Tab and Enter
+            key == 8 || key == 9 || key == 13 ||
+            // Home and End
+            key == 35 || key == 36 ||
+            // left and right arrows
+            key == 37 || key == 39 ||
+            // . and ,
+            key == 190 || key == 188 ||
+            // ATAS and BAWAH
+            key == 24 || key == 25 ||
+            // KANAN and KIRI
+            key == 26 || key == 27 ||
+            // Del and Ins
+            key == 46 || key == 45)
+            return true;
+        return false;
+    });
+
+
+</script>
+

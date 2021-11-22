@@ -25,6 +25,7 @@ namespace LeasingRazor.Domain
             Tahun=tahun;
             Tipe=tipe;
             TypeKendaraan=typeKendaraan;
+            Aktif = string.Empty;
         }
 
         public Guid MasterBarangId { get; set; }

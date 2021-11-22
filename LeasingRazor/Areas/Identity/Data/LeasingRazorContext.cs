@@ -1,10 +1,13 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using LeasingRazor.Domain;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
+
+
 namespace LeasingRazor.Data;
 
-public class LeasingRazorContext : IdentityDbContext<IdentityUser>
+public class LeasingRazorContext : IdentityDbContext<ApplicationUser>
 {
     public LeasingRazorContext(DbContextOptions<LeasingRazorContext> options)
         : base(options)

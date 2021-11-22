@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataKontrakKreditByNoID
 {
-    public class GetListDataKontrakKreditByNoIDQuery:IRequest<IReadOnlyCollection<GetListDataKontrakKreditByNoIDResponse>>
+    public class GetListDataKontrakKreditByNoIDQuery:IRequest<GetListDataKontrakKreditByNoIDResponse>
     {
         public string dataKontrakId { get; set; }
     }

@@ -10,6 +10,7 @@ namespace LeasingRazor.Pages.DataAvalist
     {
         private readonly IMediator _mediator;
 
+
         public ListDataKontrakKreditModel(IMediator mediator)
         {
             _mediator=mediator;
@@ -21,9 +22,9 @@ namespace LeasingRazor.Pages.DataAvalist
             ViewData["DataKontrakList1"] = new SelectList(datalist, "NoUrutDataKontrakKredit1", "DataKontrakKredit");
 
         }
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(string DataId)
         {
-            return RedirectToPage();
+            return RedirectToPage("./CetakDataRincianAngsuran", new { dataKontrakKreditId = DataId });
         }
     }
 }

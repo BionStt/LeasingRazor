@@ -1,4 +1,5 @@
 ﻿using LeasingRazor.Domain;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace LeasingRazor.Persistence.Context
 {
-    public class LeasingRazorDbContext:DbContext
+    public class LeasingRazorDbContext  : IdentityDbContext<ApplicationUser>
     {
         public LeasingRazorDbContext(DbContextOptions<LeasingRazorDbContext> options):base(options)
         {
