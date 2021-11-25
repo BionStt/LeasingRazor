@@ -53,9 +53,8 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddRazorPages();
 
 
-
 builder.WebHost.UseWebRoot(
-Path.Combine(Directory.GetCurrentDirectory(),"wwwroot"));
+Path.Combine(Directory.GetCurrentDirectory(), "wwwroot"));
 
 var app = builder.Build();
 
@@ -98,6 +97,8 @@ if (!app.Environment.IsDevelopment())
 app.UseNToastNotify();
 
 app.UseHttpsRedirection();
+
+//app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -105,5 +106,10 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+//app.UseEndpoints(endpoints =>
+//{
+//    endpoints.MapRazorPages();
+//});
 
 app.Run();

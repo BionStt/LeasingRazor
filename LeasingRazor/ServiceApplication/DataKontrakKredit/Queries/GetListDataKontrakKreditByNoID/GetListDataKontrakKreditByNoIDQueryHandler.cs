@@ -21,8 +21,7 @@ namespace LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataK
 
         public async Task<GetListDataKontrakKreditByNoIDResponse> Handle(GetListDataKontrakKreditByNoIDQuery request, CancellationToken cancellationToken)
         {
-            var returnQuery = await (from a in _context.DataKontrakAngsuran
-                            join b in _context.DataKontrakKredit on a.DataKontrakKreditId equals b.DataKontrakKreditId
+            var returnQuery = await (from  b in _context.DataKontrakKredit 
                             join c in _context.DataKontrakSurvei on b.DataKontrakSurveiId equals c.DataKontrakSurveiId
                             join d in _context.DataKonsumen on c.DataKonsumenAvalistId equals d.DataKonsumenId
                             where b.NoUrutId == Int32.Parse(request.dataKontrakId)
@@ -42,8 +41,13 @@ namespace LeasingRazor.ServiceApplication.DataKontrakKredit.Queries.GetListDataK
                                 NilaiBunga1 = b.NilaiBunga,
                                 Tenor1 = b.LamaKredit,
                                 Angsuran1 = b.AngsuranBulanan,
-                                pinjamanPokok = b.PinjamanPokok
-
+                                pinjamanPokok = b.PinjamanPokok,
+                                hargaBarang = b.HargaBarang,
+                                uangMuka = b.UangMuka,
+                                administrasi = b.Administrasi,
+                                asuransi = b.Asuransi,
+                                bungaEff= b.BungaEff,
+                                bungaFlat = b.BungaFlat
 
                             }
 

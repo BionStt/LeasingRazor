@@ -1,5 +1,6 @@
 using LeasingRazor.Dto.DataKonsumen;
 using LeasingRazor.Helpers;
+using LeasingRazor.Mapping;
 using LeasingRazor.ServiceApplication.MasterBidangPekerjaan.Queries.GetNamaBidangPekerjaan;
 using LeasingRazor.ServiceApplication.MasterBidangUsaha.Queries.GetNamaBidangUsaha;
 using MediatR;
@@ -39,9 +40,18 @@ namespace LeasingRazor.Pages.DataAvalist
 
         public async Task<IActionResult> OnPostAsync()
         {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
+            var xx = DataKonsumenRequest.ToCommand();
+            await _mediator.Send(xx);
 
 
-            return RedirectToPage();
+
+            return RedirectToPage("./DataAvalist/CreateDataKontrakSurvei");
+
+     
 
         }
     }

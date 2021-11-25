@@ -2,6 +2,7 @@
 @model LeasingRazor.Pages.DataAvalist.ListDataKontrakKreditModel
 @{
        ViewData["Title"] = "ListDataKontrakKredit";
+          Layout = "~/Pages/Shared/AdminLTE/_Layout.cshtml";
 }
 
 
@@ -14,7 +15,9 @@
                 <div class="col-md-10">
                     <div class="form-group">
                         <label>Data List</label>
-                        <select name="DataId" class="form-control" asp-items="@ViewBag.DataKontrakList1"></select>
+                        <select name="DataId" class="form-control" asp-items="@ViewBag.DataKontrakList1">
+                              <option>Silahkan Pilih Data</option>
+                        </select>
                     </div>
                 </div>
                 <div class="col-md-5">

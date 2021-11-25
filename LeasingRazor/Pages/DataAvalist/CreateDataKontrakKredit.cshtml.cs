@@ -25,6 +25,8 @@ namespace LeasingRazor.Pages.DataAvalist
             ViewData["PolaAngsuran1"] = new SelectList(SelectListItemHelper.GetPolaAngsuran(), "Value", "Text");
             ViewData["CaraBayar1"] = new SelectList(SelectListItemHelper.GetCaraBayar(), "Value", "Text");
 
+            ViewData["Penagih"] = new SelectList(SelectListItemHelper.GetPenagih(),"Value","Text");
+
             var DataSurvei1 = await _mediator.Send(new GetDataSurveiQuery());
             ViewData["DataSurvei1"] = new SelectList(DataSurvei1, "NoDataSurveiAvalist", "NamaKonsumen");
 
@@ -32,15 +34,15 @@ namespace LeasingRazor.Pages.DataAvalist
         }
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
             var xx = DataKonstrakKredit.ToCommand();
             await _mediator.Send(xx);
 
-
-            return RedirectToPage();
+            return RedirectToPage("./ListDataKontrakKredit");
+           // return RedirectToPage();
         }
     }
 }

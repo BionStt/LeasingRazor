@@ -22,6 +22,11 @@ namespace LeasingRazor.Dto.DataKontrakKredit
         public int? Tenor1 { get; set; }
         public double? Angsuran1 { get; set; }
         public double? pinjamanPokok { get; set; }
-
+        public double? hargaBarang { get; set; }
+        public double? uangMuka { get; set; }
+        public double? administrasi { get; set; }
+        public double? asuransi { get; set; }
+        public decimal? bungaEff { get; set; }
+        public decimal? bungaFlat { get; set; }
     }
 }

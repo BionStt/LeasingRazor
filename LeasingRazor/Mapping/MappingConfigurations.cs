@@ -1,7 +1,9 @@
-﻿using LeasingRazor.Dto.DatakontrakAsuransi;
+﻿using LeasingRazor.Dto.DataKonsumen;
+using LeasingRazor.Dto.DatakontrakAsuransi;
 using LeasingRazor.Dto.DataKontrakKredit;
 using LeasingRazor.Dto.DataKontrakKreditAngsuranDemo;
 using LeasingRazor.Dto.DataKontrakSurvei;
+using LeasingRazor.ServiceApplication.DataKonsumen.Commands.CreateDataKonsumen;
 using LeasingRazor.ServiceApplication.DataKontrakAsuransi.Commands.CreateDataKontrakAsuransi;
 using LeasingRazor.ServiceApplication.DataKontrakKredit.Commands.CreateDataKontrakKredit;
 using LeasingRazor.ServiceApplication.DataKontrakKreditAngsuranDemo.Commands.CreateDataKontrakKreditAngsuranDemo;
@@ -16,6 +18,136 @@ namespace LeasingRazor.Mapping
 {
     public static class MappingConfigurations
     {
+        public static CreateDataKonsumenCommand ToCommand(this CreateDataKonsumenRequest model)
+        {
+            return new CreateDataKonsumenCommand {
+                Agama = model.Agama,
+                AgamaPenjamin = model.AgamaPenjamin,
+                AlamatKantor = model.AlamatKantor,
+                AlamatKantorPenjamin = model.AlamatKantorPenjamin,
+                AlamatKTP = model.AlamatKTP,
+                AlamatKtpPenjamin = model.AlamatKtpPenjamin,
+                AlamatPenjamin = model.AlamatPenjamin,
+                AlamatSurat = model.AlamatSurat,
+                AlamatTinggalK = model.AlamatTinggalK,
+                AlamatUsaha = model.AlamatUsaha,
+                AlamatUsahaPenjamin = model.AlamatUsahaPenjamin,
+                Email = model.Email,
+                EmailPenjamin = model.EmailPenjamin,
+                FaxKantor = model.FaxKantor,
+                FaxKantorPenjamin = model.FaxKantorPenjamin,
+                FaxUsaha = model.FaxUsaha,
+                FaxUsahaPenjamin = model.FaxUsahaPenjamin,
+                HubunganPenjamin = model.HubunganPenjamin,
+                JabatanPerusahaan = model.JabatanPerusahaan,
+                JenisKelamin = model.JenisKelamin,
+                JenisKelaminPenjamin= model.JenisKelaminPenjamin,
+                JmlKaryawanPenjamin = model.JmlKaryawanPenjamin,
+                JumlahKaryawan = model.JumlahKaryawan,
+                KecamatanK = model.KecamatanK,
+                KecamatanKantor = model.KecamatanKantor,
+                KecamatanKantorPenjamin=model.KecamatanKantorPenjamin,
+                KecamatanKTP = model.KecamatanKTP,
+                KecamatanKtpPenjamin = model.KecamatanKtpPenjamin,
+                KecamatanPenjamin= model.KecamatanPenjamin,
+                KecamatanSurat=model.KecamatanSurat,
+                KecamatanUsaha=model.KecamatanUsaha,
+                KecamatanUsahaPenjamin=model.KecamatanUsahaPenjamin,
+                KelurahanK = model.KelurahanK,
+                TanggalRegister = model.TanggalRegister,
+                KelurahanKantor = model.KelurahanKantor,
+                KelurahanKantorPenjamin= model.KelurahanKantorPenjamin,
+                KelurahanKTP = model.KelurahanKTP,
+                KelurahanKtpPenjamin=model.KelurahanKtpPenjamin,
+                KelurahanPenjamin = model.KelurahanPenjamin,
+                KelurahanSurat=model.KelurahanSurat,
+                KelurahanUsaha = model.KelurahanUsaha,
+                KelurahanUsahaPenjamin = model.KelurahanUsahaPenjamin,
+                KodeBidangUsaha=model.KodeBidangUsaha,
+                KodeBidangUsahaIbuKandung=model.KodeBidangUsahaIbuKandung,
+                KodeBidangUsahaPenjamin=model.KodeBidangUsahaPenjamin,
+                KodePekerjaan = model.KodePekerjaan,
+                KodePekerjaanIbuKandung=model.KodePekerjaanIbuKandung,
+                KodePekerjaanPenjamin=model.KodePekerjaanPenjamin,
+                KodePosKantor=model.KodePosKantor,
+                 KodePosKantorPenjamin=model.KodePosKantorPenjamin,
+                 KodePosKTP = model.KodePosKTP,
+                 KodePosKTPPenjamin=model.KodePosKTPPenjamin,
+                 KodePosPenjamin=model.KodePosPenjamin,
+                 KodePosSurat=model.KodePosSurat,
+                 KodePosTinggalK=model.KodePosTinggalK,
+                 TanggalMulaiUsaha = model.TanggalMulaiUsaha,
+                 KodePosUsaha=model.KodePosUsaha,
+                 KodePosUsahaPenjamin=model.KodePosUsahaPenjamin,
+                 KotaK=model.KodePosUsahaPenjamin,
+                 KotaKantor=model.KotaKantor,
+                 KotaKantorPenjamin=model.KotaKantorPenjamin,
+                 KotaKTP=model.KotaKTP,
+                 KotaKtpPenjamin=model.KotaKtpPenjamin,
+                 KotaPenjamin=model.KotaPenjamin,
+                 KotaSurat=model.KotaSurat,
+                 KotaUsaha=model.KotaUsaha,
+                 KotaUsahaPenjamin  =model.KotaUsahaPenjamin,
+                 NamaBidangUsaha=model.NamaBidangUsaha,
+                 NamaBidangUsahaIbuKandung=model.NamaBidangUsahaIbuKandung,
+                 NamaBidangUsahaPenjamin = model.NamaBidangUsahaPenjamin,
+                 NamaIbuKandung=model.NamaIbuKandung,
+                 NamaKantor=model.NamaKantor,
+                 NamaKantorPenjamin=model.NamaKantorPenjamin,
+                 NamaKonsumen=model.NamaKonsumen,
+                 NamaPekerjaan=model.NamaPekerjaan,
+                 NamaPekerjaanIbuKandung=model.NamaPekerjaanIbuKandung,
+                 NamaPekerjaanPenjamin=model.NamaPekerjaanPenjamin,
+                 NamaPenjamin=model.NamaPenjamin,
+                 NamaUsaha = model.NamaUsaha,
+                 NamaUsahaPenjamin=model.NamaUsahaPenjamin,
+                 NoHandphone=model.NoHandphone,
+                 NoHandphone2=model.NoHandphone2,
+                 NoHandphonePenjamin=model.NoHandphonePenjamin,
+                 NoHandphonePenjamin2 = model.NoHandphonePenjamin2,
+                 NoKTP=model.NoKTP,
+                 NoKTPPenjamin=model.NoKTPPenjamin,
+                 NoNpwpusaha=model.NoNpwpusaha,
+                 NoNPWPUsahaPenjamin=model.NoNPWPUsahaPenjamin,
+                 NoSiupusaha=model.NoSiupusaha,
+                 NoSIUPusahaPenjamin=model.NoSIUPusahaPenjamin,
+                 NoTDPusaha=model.NoTDPusaha,
+                 NoTDPUsahaPenjamin=model.NoTDPUsahaPenjamin,
+                 NoUrutKonsumen=model.NoUrutKonsumen,
+                 PropinsiK=model.PropinsiK,
+                 PropinsiKantor=model.PropinsiKantor,
+                 PropinsiKantorPenjamin = model.PropinsiKantorPenjamin,
+                 PropinsiKTP =model.PropinsiKTP,
+                 PropinsiKtpPenjamin = model.PropinsiKtpPenjamin,
+                 PropinsiPenjamin = model.PropinsiPenjamin,
+                 PropinsiSurat = model.PropinsiSurat,
+                 PropinsiUsaha = model.PropinsiUsaha,
+                 PropinsiUsahaPenjamin =model.PropinsiUsahaPenjamin,
+                 SkalaUsaha = model.SkalaUsaha,
+                 SkalaUsahaPenjamin = model.SkalaUsahaPenjamin,
+                 StatusNikah = model.StatusNikah,
+                 StatusNikahPenjamin = model.StatusNikahPenjamin,
+                 TanggalExpireKTP = model.TanggalExpireKTP,
+                 TanggalExpireKTPPenjamin = model.TanggalExpireKTPPenjamin,
+                 Tanggallahir = model.Tanggallahir,
+                 TanggalLahirPenjamin = model.TanggalLahirPenjamin,
+                 TelpKantor = model.TelpKantor, 
+                 TelpKantorPenjamin = model.TelpKantorPenjamin,
+                TelpRumah=model.TelpRumah,
+                TelpRumahPenjamin=model.TelpRumahPenjamin,
+                TelpUsaha=model.TelpUsaha,
+                TelpUsahaPenjamin=model.TelpUsahaPenjamin,
+                TempatLahir=model.TempatLahir,
+                TempatLahirPenjamin=model.TempatLahirPenjamin,
+                TingkatPendidikan = model.TingkatPendidikan,
+                TingkatPendidikanPenjamin = model.TingkatPendidikanPenjamin
+
+
+
+
+
+            };
+        }
         public static CreateDataKontrakKreditAngsuranDemoCommand ToCommand(this CreateDataKontrakKreditAngsuranDemoRequest model)
         {
             return new CreateDataKontrakKreditAngsuranDemoCommand { 

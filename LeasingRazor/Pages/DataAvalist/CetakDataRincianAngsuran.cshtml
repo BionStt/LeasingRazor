@@ -1,6 +1,7 @@
 ﻿@page
 @model LeasingRazor.Pages.DataAvalist.CetakDataRincianAngsuranModel
 @{
+       Layout = "~/Pages/Shared/AdminLTE/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -66,7 +67,20 @@
                 <td>   @ViewBag.NoHP1 </td>
                 <td>  @ViewBag.NoHP2</td>
             </tr>
-
+            <tr>
+                <th>Harga Barang</th>
+                  <th>Uang Muka</th>
+                    <th>Asuransi</th>
+                      <th>Administrasi</th>
+                      <th>Bunga(eff/Flat)</th>
+            </tr>
+            <tr>
+                <td> @string.Format("{0:c}", ViewBag.hargaBarang)</td>
+                  <td> @string.Format("{0:c}", ViewBag.uangMuka)</td>
+                    <td> @string.Format("{0:c}", ViewBag.asuransi)</td>
+                      <td> @string.Format("{0:c}", ViewBag.administrasi)</td>
+                      <td> @string.Format("{0:0.0#} / {1:0.0#}", ViewBag.bungaEff, ViewBag.bungaFlat)</td>
+            </tr>
             <tr>
 
                 <th>Nilai Kontrak</th>
@@ -81,7 +95,8 @@
                 <td>  @string.Format("{0:c}", ViewBag.NilaiKontrak1) </td>
                 <td>  @string.Format("{0:c}", ViewBag.NilaiBunga1) </td>
                 <td> @ViewBag.Tenor1</td>
-                <td>@ViewBag.pinjamanPokok</td>
+             
+                 <td>@string.Format("{0:c}",@ViewBag.pinjamanPokok)</td>
                 <td> @string.Format("{0:c}", ViewBag.Angsuran1) </td>
             </tr>
         </table>
@@ -182,15 +197,3 @@
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     }
 </style>
-<script language="javascript">
-    function printdiv(printpage) {
-        var headstr = "<html><head><title></title></head><body>";
-        var footstr = "</body>";
-        var newstr = document.all.item(printpage).innerHTML;
-        var oldstr = document.body.innerHTML;
-        document.body.innerHTML = headstr + newstr + footstr;
-        window.print();
-        document.body.innerHTML = oldstr;
-        return false;
-    }
-</script>

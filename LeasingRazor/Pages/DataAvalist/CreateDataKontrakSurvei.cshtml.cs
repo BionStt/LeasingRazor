@@ -66,17 +66,17 @@ namespace LeasingRazor.Pages.DataAvalist
         }
         public async Task<IActionResult> OnPostAsync()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
             var xx = DataKonstrakSurvei.ToCommand();
             await _mediator.Send(xx);
 
 
 
-            return RedirectToPage("./DataAvalist/CreateDataKontrakKredit");
-            //   return RedirectToPage("./CreateDataKontrakKredit");
+           // return RedirectToPage("./DataAvalist/CreateDataKontrakKredit");
+               return RedirectToPage("./CreateDataKontrakKredit");
             // return RedirectToPage();
         }
 

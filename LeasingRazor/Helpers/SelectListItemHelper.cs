@@ -9,6 +9,16 @@ namespace LeasingRazor.Helpers
 {
     public class SelectListItemHelper
     {
+        public static IEnumerable<SelectListItem> GetPenagih()
+        {
+            IList<SelectListItem> items = new List<SelectListItem>
+            {
+                  new SelectListItem {Text = "Baso", Value = "1"},
+                  new SelectListItem {Text = "Aco", Value = "2"},
+                    new SelectListItem {Text = "Anto", Value = "3"},
+            };
+            return items;
+        }
         public static IEnumerable<SelectListItem> GetSkalaUsaha()
         {
             IList<SelectListItem> items = new List<SelectListItem>

@@ -37,7 +37,12 @@ namespace LeasingRazor.Pages.DataAvalist
             ViewData["Tenor1"] = DataAngsuran.Tenor1;
             ViewData["Angsuran1"] = DataAngsuran.Angsuran1;
             ViewData["pinjamanPokok"] = DataAngsuran.pinjamanPokok;
-
+            ViewData["hargaBarang"] = DataAngsuran.hargaBarang;
+            ViewData["uangMuka"] = DataAngsuran.uangMuka;
+            ViewData["asuransi"] = DataAngsuran.asuransi;
+            ViewData["administrasi"] = DataAngsuran.administrasi;
+            ViewData["bungaEff"] = DataAngsuran.bungaEff;
+            ViewData["bungaFlat"] = DataAngsuran.bungaFlat;
 
             DataKontrakAngsuranById = await _mediator.Send(new GetDataKontrakAngsuranByNoIDQuery { dataKontrakId = dataKontrakKreditId });
          
